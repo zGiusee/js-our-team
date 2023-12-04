@@ -38,7 +38,10 @@ console.log(employees);
 
 // CREO IL CICLO FOR CHE MI PERMETTA DI STAMPARE TUTTE LE INFORMAZIONI DEI DIPENDENTI
 
+let employees_display = document.getElementById('employees_container');
+
 for(let i = 0; i<employees.length ; i++){
 
-    console.log(employees[i])
+    employees_display.innerHTML += `<div><p>${employees[i].name} ${employees[i].role} ${employees[i].image}</p></div>`
+
 }
