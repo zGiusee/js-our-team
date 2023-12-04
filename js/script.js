@@ -34,3 +34,11 @@ let employees = [
     },   
 ]
 
+console.log(employees);
+
+// CREO IL CICLO FOR CHE MI PERMETTA DI STAMPARE TUTTE LE INFORMAZIONI DEI DIPENDENTI
+
+for(let i = 0; i<employees.length ; i++){
+
+    console.log(employees[i])
+}
