@@ -42,6 +42,28 @@ let employees_display = document.getElementById('employees_container');
 
 for(let i = 0; i<employees.length ; i++){
 
-    employees_display.innerHTML += `<div><p>${employees[i].name} ${employees[i].role} ${employees[i].image}</p></div>`
+    // Creo il div contenitore
+    let div = document.createElement('div');
+    div.classList.add('col-4', 'p-3', 'text-white');
 
+    // Creo l'elemento immagine
+    let cardImg = document.createElement('div');
+    cardImg.innerHTML = `<img src='../js-our-team/img/${employees[i].image}'>`;
+
+    // Creo il contenuto del nome
+    let cardName = document.createElement('div');
+    cardName.classList.add('mt-3')
+    cardName.innerHTML = `<h3>${employees[i].name}</h3>`;
+
+    // Creo il contenuto del ruolo
+    let cardRole = document.createElement('div');
+    cardRole.innerHTML = `<h4>${employees[i].role}</h4>`;
+
+    // APPENDO I CONTENUTI AL DIV CONTENITORE
+    div.appendChild(cardImg);
+    div.appendChild(cardName);
+    div.appendChild(cardRole);
+
+    // APPENDO IL DIV CONTENITORE ALL CONTAINER DELLE CARD
+    employees_display.appendChild(div);
 }
