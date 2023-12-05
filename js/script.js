@@ -38,6 +38,7 @@ console.log(employees);
 
 // CREO IL CICLO FOR CHE MI PERMETTA DI STAMPARE TUTTE LE INFORMAZIONI DEI DIPENDENTI
 
+// Dichiaro la variabile del container principale delle card
 let employees_display = document.getElementById('employees_container');
 
 for(let i = 0; i<employees.length ; i++){
@@ -46,16 +47,16 @@ for(let i = 0; i<employees.length ; i++){
     let div = document.createElement('div');
     div.classList.add('col-4', 'p-3', 'text-white');
 
-    // Creo l'elemento immagine
+    // Dichiaro la variabile del contenuto: immagine
     let cardImg = document.createElement('div');
     cardImg.innerHTML = `<img src='../js-our-team/img/${employees[i].image}'>`;
 
-    // Creo il contenuto del nome
+    // Dichiaro la variabile del contenuto: nome
     let cardName = document.createElement('div');
     cardName.classList.add('mt-3')
     cardName.innerHTML = `<h3>${employees[i].name}</h3>`;
 
-    // Creo il contenuto del ruolo
+    // Dichiaro la variabile del contenuto: ruolo
     let cardRole = document.createElement('div');
     cardRole.innerHTML = `<h4>${employees[i].role}</h4>`;
 
