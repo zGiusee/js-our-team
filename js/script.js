@@ -49,7 +49,7 @@ for(let i = 0; i<employees.length ; i++){
 
     // Dichiaro la variabile del contenuto: immagine
     let cardImg = document.createElement('div');
-    cardImg.innerHTML = `<img src='../js-our-team/img/${employees[i].image}'>`;
+    cardImg.innerHTML = `<img src='./img/${employees[i].image}'>`;
 
     // Dichiaro la variabile del contenuto: nome
     let cardName = document.createElement('div');
